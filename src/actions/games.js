@@ -21,7 +21,7 @@ export function gamesGetDataSuccess(games) {
 	}
 }
 
-//this action creator handles dispatching the other 3 above
+//Handles dispatching the other 3 above
 export function gamesGetData(request) {
 	return (dispatch) => {
 		dispatch(gamesIsLoading(true));
