@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "css-loader": "^0.28.4",
     "moment": "^2.18.1",
     "moment-timezone": "^0.5.13",
+    "normalize.css": "^7.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-moment": "^0.2.4",

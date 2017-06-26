@@ -7,6 +7,7 @@ import configureStore from './store/configureStore';
 
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import 'normalize.css';
 import './index.css';
 
 const store = configureStore(); //initial state can be passed in here

@@ -7,7 +7,7 @@ class RootNav extends Component {
   render() {
     return (
 			<div className="btn-group">     
-        <button>Sign Up</button>
+        <button className="signup">Sign Up</button>
         <button><Link to="/profile">Login</Link></button>
       </div>
     );

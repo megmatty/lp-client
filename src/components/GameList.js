@@ -7,7 +7,9 @@ import Game from './Game';
 class GameList extends Component {
 
 	componentDidMount() {
-		const request = new Request("https://igdbcom-internet-game-database-v1.p.mashape.com/games/?fields=name%2Crating%2Cfirst_release_date%2Csummary%2Cstoryline%2Ccover&limit=3&offset=0&order=release_dates.date%3Adesc&search=zelda", {
+		const query = 'zelda';
+
+		const request = new Request(`https://igdbcom-internet-game-database-v1.p.mashape.com/games/?fields=name%2Crating%2Cfirst_release_date%2Csummary%2Cstoryline%2Ccover&limit=3&offset=0&order=release_dates.date%3Adesc&search=${query}`, {
         headers: new Headers({
           'X-Mashape-Key': 'EUQMsXMjGmmshSjK8dQ9W31H8UOtp1wKG3bjsnwgRTlndgTXjR'
         })
@@ -27,17 +29,16 @@ class GameList extends Component {
 
 		return (
 			<div>
-				<p>My Lists</p>
-					{this.props.games.map((game) => (
-						<Game 
-							key={game.id} 
-							name={game.name}
-							cover={game.cover}
-							year={game.first_release_date}
-							rating={game.rating}
-							summary={game.summary ? game.summary : game.storyline || 'This game has no summary'}
-						/>
-					))}
+				{this.props.games.map((game) => (
+					<Game 
+						key={game.id} 
+						name={game.name}
+						cover={game.cover}
+						year={game.first_release_date}
+						rating={game.rating ? Math.floor(game.rating) + '/100' : 'NR'}
+						summary={game.summary ? game.summary.substring(0, 150) : game.storyline.substring(0, 100) || 'This game has no summary'}
+					/>
+				))}
 			</div>
 		);
 	}

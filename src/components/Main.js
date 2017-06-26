@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import GameList from './GameList';
+import MyLists from './MyLists';
 import Landing from './Landing';
+import Profile from './Profile';
 
 class Main extends Component {
 	render() {
@@ -10,7 +11,8 @@ class Main extends Component {
 			<div>      
 				<Switch>
 					<Route exact path="/" component={Landing}/>
-					<Route path="/lists" component={GameList}/>
+					<Route path="/profile" component={Profile}/>
+					<Route path="/lists" component={MyLists}/>
 				</Switch>
 			</div>
 			);

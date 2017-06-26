@@ -1,24 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+ul {
+  padding: 0;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+li {
+  list-style: none;
 }
 
-.App-intro {
-  font-size: large;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50vw;
+}
+
+.navlinks li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.signup {
+  margin-right: 5px;
+}
+
+.box-art {
+  width: 100px;
+}
+
+.avatar {
+  width: 50px;
+  border-radius: 100%;
+}
+
+.friend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 0 25px;
+}
+
+.list-switcher {
+  display: flex;
+  font-size: .9em;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+
+.list-title {
+  border: 1px solid black;
+  padding: 5px;
+  cursor: pointer;
 }

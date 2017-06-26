@@ -41,3 +41,22 @@ export function gamesGetData(request) {
 			.catch( () => dispatch(gamesHasErrored(true)) )
 	};
 }
+
+
+export const changeList = (list) => {
+    console.log("You clicked on list: ", list);
+    return {
+        type: 'CHANGE_LIST',
+        list: list
+    }
+};
+
+
+
+
+
+
+
+
+
+
