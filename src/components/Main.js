@@ -10,7 +10,7 @@ class Main extends Component {
 			<div>      
 				<Switch>
 					<Route exact path="/" component={Landing}/>
-					<Route path="/profile" component={GameList}/>
+					<Route path="/lists" component={GameList}/>
 				</Switch>
 			</div>
 			);
