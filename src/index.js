@@ -20,3 +20,6 @@ ReactDOM.render(
 	document.getElementById('root')
 );
 registerServiceWorker();
+
+
+//when you update this ReactDOM render in any way, UPDATE THE TEST
