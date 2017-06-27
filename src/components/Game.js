@@ -6,6 +6,7 @@ class Game extends Component {
     return (
       <div className="game">
         <p>{this.props.name}</p>
+        <button onClick={() => console.log(this)}>Log</button>
         <img className="box-art" src={'//images.igdb.com/igdb/image/upload/t_cover_big/'+ this.props.cover.cloudinary_id + '.jpg'} alt='gamebox art' />
         <p>Year: <Moment format="YYYY">{this.props.first_release_date}</Moment></p>
         <p>Rating: {this.props.rating}</p>

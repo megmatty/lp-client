@@ -2,8 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+import { deleteFriend } from '../actions/games';
 //Friend List - redux state container
 class FriendList extends Component {
+
+  delete() {
+    console.log('delete');
+  }
 
   render() {
     return (
@@ -14,6 +19,8 @@ class FriendList extends Component {
             <div className="friend" key={i}>
               <img className="avatar" src={friend.avatar} alt="avatar"/>
               <p>{friend.name}</p>
+              <button onClick={() => console.log(this)}>Log</button>
+              <button onClick={() => this.props.delete2(friend.id)}>Delete</button>
               <Link to="/contact"><img src="envelope.png" alt="contact icon"/></Link>
             </div>
           )}
@@ -30,8 +37,17 @@ const mapStateToProps = (state) => {
   };
 };
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    delete2: (id) => {
+      console.log('delete2', id);
+      dispatch(deleteFriend(id));
+    }
+  }
+}
+
 //Connect component to Redux while mapping props for us to use
-export default connect(mapStateToProps)(FriendList);
+export default connect(mapStateToProps, mapDispatchToProps)(FriendList);
 
 
 

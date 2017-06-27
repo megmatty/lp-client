@@ -99,7 +99,9 @@ input {
   justify-content: space-between;
 }
 
-
+.results {
+  background-color: #fff;
+}
 
 
 
