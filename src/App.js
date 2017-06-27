@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import 'normalize.css';
 import './App.css';
 
+
 //Components
 import Header from './components/Header';
 import Main from './components/Main';

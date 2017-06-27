@@ -1,10 +1,11 @@
 import { combineReducers } from 'redux';
-import { games, gamesHasErrored, gamesIsLoading } from './games';
+import { games, gamesHasErrored, gamesIsLoading, friends } from './games';
 
 export default combineReducers({
 	games,
 	gamesHasErrored,
-	gamesIsLoading
+	gamesIsLoading,
+	friends
 });
 
 //ES6 shorthand - {games} is the same as {games: games}

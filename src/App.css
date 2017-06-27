@@ -66,3 +66,41 @@ li {
   padding: 5px;
   cursor: pointer;
 }
+
+.contact-form {
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  min-height: 100px;
+  margin-top: 5px;
+}
+
+input {
+  margin-top: 5px;
+}
+
+.contact-form button {
+  width: 40%;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.captcha {
+  margin: 0 auto;
+  width: 50%;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+
+
+
+
+

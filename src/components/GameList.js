@@ -3,13 +3,14 @@ import { connect } from 'react-redux';
 import { gamesGetData } from '../actions/games';
 import Game from './Game';
 
+//this is a redux state container
 
 class GameList extends Component {
 
 	componentDidMount() {
 		const query = 'zelda';
 
-		const request = new Request(`https://igdbcom-internet-game-database-v1.p.mashape.com/games/?fields=name%2Crating%2Cfirst_release_date%2Csummary%2Cstoryline%2Ccover&limit=3&offset=0&order=release_dates.date%3Adesc&search=${query}`, {
+		const request = new Request(`https://igdbcom-internet-game-database-v1.p.mashape.com/games/?fields=name%2Crating%2Cfirst_release_date%2Csummary%2Cstoryline%2Ccover&limit=10&offset=0&search=${query}`, {
         headers: new Headers({
           'X-Mashape-Key': 'EUQMsXMjGmmshSjK8dQ9W31H8UOtp1wKG3bjsnwgRTlndgTXjR'
         })
@@ -62,3 +63,5 @@ const mapDispatchToProps = (dispatch) => {
 
 //Connect component to Redux while mapping props for us to use
 export default connect(mapStateToProps, mapDispatchToProps)(GameList);
+
+

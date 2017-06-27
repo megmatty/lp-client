@@ -42,17 +42,22 @@ export function gamesGetData(request) {
 	};
 }
 
+//Add friend action
+export function addFriend(name, avatar) {
+	return {
+		type: 'ADD_FRIEND',
+		name,
+		avatar
+	}
+}
 
-export const changeList = (list) => {
-    console.log("You clicked on list: ", list);
-    return {
-        type: 'CHANGE_LIST',
-        list: list
-    }
-};
-
-
-
+//delete friend action
+export function deleteFriend(id) {
+	return {
+		type: 'DELETE_FRIEND',
+		id
+	}
+}
 
 
 
