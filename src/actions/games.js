@@ -59,9 +59,8 @@ export function deleteFriend(id) {
 	}
 }
 
-
-
-
+// const defineAnotherAction = { type:'call another action', another: function(){ console.log('%c insideAction ','background: red; color: #bada55'); } }
+// reducer: case 'call another action': action.another()
 
 
 

@@ -34,23 +34,28 @@ export const initialFriendState = {
       friends: [
         { "id": 1,
           "name": "maxpower",
-          "avatar": "http://www.radfaces.com/images/avatars/little-pete-wrigley.jpg"
+          "avatar": "http://www.radfaces.com/images/avatars/little-pete-wrigley.jpg",
+          "delete": "function() {console.log(this)}"
         },
         { "id": 2,
           "name": "lisasimpson",
-          "avatar": "http://www.radfaces.com/images/avatars/aeon-flux.jpg"
+          "avatar": "http://www.radfaces.com/images/avatars/aeon-flux.jpg",
+          "delete": "function() {console.log(this)}"
         },
         { "id": 3,
           "name": "HansMoleman",
-          "avatar": "http://www.radfaces.com/images/avatars/artie-strongman.jpg"
+          "avatar": "http://www.radfaces.com/images/avatars/artie-strongman.jpg",
+          "delete": "function() {console.log(this)}"
         },
         { "id": 4,
           "name": "hughJass",
-          "avatar": "http://www.radfaces.com/images/avatars/bradley-taylor.jpg"
+          "avatar": "http://www.radfaces.com/images/avatars/bradley-taylor.jpg",
+          "delete": "function() {console.log(this)}"
         },
         { "id": 5,
           "name": "carlCcarlson",
-          "avatar": "http://www.radfaces.com/images/avatars/lawrence-cohen.jpg"
+          "avatar": "http://www.radfaces.com/images/avatars/lawrence-cohen.jpg",
+          "delete": "function() {console.log(this)}"
         }
       ]
   };

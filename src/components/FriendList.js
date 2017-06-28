@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-
+import Friend from './Friend';
 import { deleteFriend } from '../actions/games';
+
 //Friend List - redux state container
 class FriendList extends Component {
-
-  delete() {
-    console.log('delete');
-  }
 
   render() {
     return (
@@ -16,13 +12,13 @@ class FriendList extends Component {
         <h3>My Game Friends</h3>
         <div className="friend-list">
           {this.props.friends.map((friend,i) => 
-            <div className="friend" key={i}>
-              <img className="avatar" src={friend.avatar} alt="avatar"/>
-              <p>{friend.name}</p>
-              <button onClick={() => console.log(this)}>Log</button>
-              <button onClick={() => this.props.delete2(friend.id)}>Delete</button>
-              <Link to="/contact"><img src="envelope.png" alt="contact icon"/></Link>
-            </div>
+            <Friend 
+              key={i}
+              id={friend.id}
+              name={friend.name}
+              avatar={friend.avatar}
+              handleDelete={this.props.delete}
+        />
           )}
         </div>
       </div>
@@ -32,6 +28,7 @@ class FriendList extends Component {
 
 //Take state and map to prop object
 const mapStateToProps = (state) => {
+  console.log(state);
   return {
     ...state.friends
   };
@@ -39,8 +36,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    delete2: (id) => {
-      console.log('delete2', id);
+    delete: (id) => {
+      console.log('delete', id);
       dispatch(deleteFriend(id));
     }
   }
