@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import Friend from './Friend';
-import { deleteFriend } from '../actions/games';
 
 //Friend List - redux state container
 class FriendList extends Component {
@@ -17,7 +15,7 @@ class FriendList extends Component {
               id={friend.id}
               name={friend.name}
               avatar={friend.avatar}
-              handleDelete={this.props.delete}
+              deleteFriend={this.props.deleteFriend}
         />
           )}
         </div>
@@ -26,27 +24,7 @@ class FriendList extends Component {
   }
 }
 
-//Take state and map to prop object
-const mapStateToProps = (state) => {
-  console.log(state);
-  return {
-    ...state.friends
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    delete: (id) => {
-      console.log('delete', id);
-      dispatch(deleteFriend(id));
-    }
-  }
-}
-
-//Connect component to Redux while mapping props for us to use
-export default connect(mapStateToProps, mapDispatchToProps)(FriendList);
-
-
+export default FriendList;
 
 
 
