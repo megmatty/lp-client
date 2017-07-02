@@ -70,7 +70,7 @@ export function friends(state = initialFriendState, action) {
 			})
 		case 'DELETE_FRIEND':
 			console.log(action.id);
-			return Object.assign({}, {
+			return Object.assign({}, state, {
 				friends: state.friends.filter(friend => friend.id !== action.id)
 				});
 		default:
@@ -114,14 +114,41 @@ export function gamesList(state = initialGameListState, action) {
 	switch (action.type) {
 		case 'DELETE_GAME':
 			console.log(action.id);
-			return Object.assign({}, {
+			return Object.assign({}, state, {
 				gamesList: state.gamesList.filter(game => game.id !== action.id)
 				});
+		case 'ADD_GAME':
+			console.log(action.id);
+			return Object.assign({}, state, {
+				gamesList: [...state.gamesList, {
+					id: action.id
+				}]
+			})
 		default:
 			return state;
 	}
 }
 
 
+//Search reducer 
+export const initialSearchState = {
+	query: '',
+	selectedGame: ''
+};
 
-
+export function search(state = initialSearchState, action) {
+	switch (action.type) {
+		case 'SELECT_GAME_RESULT':
+		console.log(action.name, 'from reducer');
+			return Object.assign({}, state, {
+				selectedGame: action.name
+				});
+		case 'CAPTURE_QUERY':
+		console.log(action.query, 'from reducer');
+			return Object.assign({}, state, {
+				query: action.query
+				});
+		default:
+			return state;
+	}
+}

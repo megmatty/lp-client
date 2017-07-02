@@ -1,4 +1,5 @@
 //Thunk allows you to write action creators that return a function instead of an action
+//These are all action creators
 
 export function gamesHasErrored(bool) {
 	return {
@@ -66,6 +67,31 @@ export function deleteGame(id) {
 		id
 	}
 }
+
+//Add Game Action
+export function addGame(id) {
+	return {
+		type: 'ADD_GAME',
+		id
+	}
+}
+
+//Select Game Result Action
+export function selectGameResult(name) {
+	return {
+		type: 'SELECT_GAME_RESULT',
+		name
+	}
+}
+
+//Capture Query Action
+export function captureQuery(query) {
+	return {
+		type: 'CAPTURE_QUERY',
+		query
+	}
+}
+
 
 
 

@@ -101,8 +101,16 @@ input {
 
 .results {
   background-color: #fff;
+  cursor: pointer;
 }
 
+.game-view .delete-game {
+  display: none;
+}
+
+.game-list .add-game {
+  display: none;
+}
 
 
 

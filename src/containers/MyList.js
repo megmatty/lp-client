@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import GameList from '../components/GameList';
-import Search from '../components/Search';
+import Search from './Search';
 
 //Redux 
 import { connect } from 'react-redux';

@@ -6,6 +6,7 @@ import MyList from '../containers/MyList';
 import Landing from './Landing';
 import Profile from '../containers/Profile';
 import Contact from './Contact';
+import GameView from './GameView';
 
 class Main extends Component {
 	render() {
@@ -16,6 +17,7 @@ class Main extends Component {
 					<Route path="/profile" component={Profile}/>
 					<Route path="/list" component={MyList}/>
 					<Route path="/contact" component={Contact}/>
+					<Route path="/game" component={GameView}/>
 				</Switch>
 			</div>
 			);
