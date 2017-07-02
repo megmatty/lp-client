@@ -6,7 +6,7 @@
 * Thunk implemented with Fetch for API - currently working on Search component
 * Basic actions/reducers working for deleting friends and games from their respective lists
 * GameView *NEW*
-	*New component added to view a single game selected from either search results or game list (might end up a container, not sure yet)
+	* New component added to view a single game selected from either search results or game list (might end up a container, not sure yet)
 	* Need to pass props of a game element to GameView component when click on game title from GameList 
 	* Added ADD button to GameView component to prepare for onClick add game to list function
 * Search
