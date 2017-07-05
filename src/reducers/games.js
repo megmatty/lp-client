@@ -133,7 +133,7 @@ export function gamesList(state = initialGameListState, action) {
 //Search reducer 
 export const initialSearchState = {
 	query: '',
-	selectedGame: ''
+	selectedGame: 'boo'
 };
 
 export function search(state = initialSearchState, action) {
@@ -145,9 +145,10 @@ export function search(state = initialSearchState, action) {
 				});
 		case 'CAPTURE_QUERY':
 		console.log(action.query, 'from reducer');
+		console.log(state);
 			return Object.assign({}, state, {
 				query: action.query
-				});
+			});
 		default:
 			return state;
 	}

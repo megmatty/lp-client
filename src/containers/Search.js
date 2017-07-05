@@ -6,14 +6,15 @@ import SearchResult from '../components/SearchResult';
 class Search extends Component {
 	//bind the functions the ES7/8+ way!
 
-	getQuery = (event) => {
+	getQuery = () => {
 		//the query doesn't need to be stored in state actually, we can pull it from ref input, then use it on Go to get results
 		let input = this.refs.input;
     this.props.captureQuery(input.value);
+    this.setState({query: input.value});
   }
 
 	loadResults = () => {
-		const query = this.refs.input.value;
+		let query = this.refs.input.value;
 		const request = new Request(`https://igdbcom-internet-game-database-v1.p.mashape.com/games/?fields=name%2Crating%2Cfirst_release_date%2Csummary%2Cstoryline%2Ccover&limit=10&offset=0&search=${query}`, {
 	      headers: new Headers({
 	        'X-Mashape-Key': 'EUQMsXMjGmmshSjK8dQ9W31H8UOtp1wKG3bjsnwgRTlndgTXjR'

@@ -9,7 +9,7 @@
 	* New component added to view a single game selected from either search results or game list (might end up a container, not sure yet)
 	* Need to pass props of a game element to GameView component when click on game title from GameList 
 	* Added ADD button to GameView component to prepare for onClick add game to list function
-* Search
+* Search  --  THIS IS A MESS RIGHT NOW
 	* Refactored search to be a Redux container *NEW*
 	* Factored out a SearchResult component. Probably not totally necessary but makes it easier for me to deal with *this* bindings *NEW*
 	* Laid groundwork for implementation of search result onClick for loading that game's data into /game view (SearchResult component holds complete props for each item that can be transferred to GameView component) *NEW*
@@ -24,6 +24,7 @@
 * http://www.jchapron.com/2015/08/14/getting-started-with-redux/
 * https://daveceddia.com/avoid-bind-when-passing-props/
 * Regarding use of multiple connected containers: https://twitter.com/dan_abramov/status/668585589609005056?lang=en
+* Should I even be using Redux at all?? https://twitter.com/dan_abramov/status/802567621803646976
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
